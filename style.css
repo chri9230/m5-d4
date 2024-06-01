@@ -1,4 +1,12 @@
 .stile img {
     height: 200px;
     width: 200px;
+    
+}
+
+.myCard {
+    padding-top: 1em;
+    text-align: center;
+    border: 1px solid black;
+
 }

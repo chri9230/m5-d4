@@ -9,13 +9,25 @@ fetch("https://striveschool-api.herokuapp.com/books").then(response => {
 
     pippo.forEach(element => {
         
-        var contenitore = ""
-        contenitore += "<div>"
+         var contenitore = ""
+        // contenitore += "<div>"
         
-        contenitore += "<div><img src='" + element.img + "'</div>"
-        contenitore += "<div>" + element.title + "</div>"
+        // contenitore += "<div><img src='" + element.img + "'</div>"
+        // contenitore += "<div>" + element.title + "</div>"
 
-        contenitore += "</div>"
+        // contenitore += "</div>"
+
+        contenitore += 
+        `
+        <div class="myCard col-3">
+            <img src="${element.img}" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">${element.title}</h5>
+            <p class="card-text">The price is: ${element.price} $</p>
+            <a href="#" class="btn btn-primary">Add to Chart</a>
+            </div>
+        </div>
+        `
 
         
         
@@ -44,15 +56,17 @@ function filtraLibri() {
         var include = titoloUpperCase.includes(valoreRicerca)
         if(include === true) {
             var contenitore = ""
-            contenitore += "<div>"
-            
-            contenitore += "<div><img src='" + element.img + "'</div>"
-            contenitore += "<div>" + element.title + "</div>"
-    
-            contenitore += "</div>"
-
-            
-
+            contenitore += 
+        `
+        <div class="myCard col-3">
+            <img src="${element.img}" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">${element.title}</h5>
+            <p class="card-text">The price is: ${element.price} $</p>
+            <a href="#" class="btn btn-primary">Add to Chart</a>
+            </div>
+        </div>
+        `
             
     
             var libri = document.querySelector('.libri')
