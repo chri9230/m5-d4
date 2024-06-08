@@ -10,3 +10,25 @@
     border: 1px solid black;
 
 }
+
+p {
+    margin-bottom: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+}
+
+nav svg {
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+}
+
+nav svg:hover {
+    background-color: rgba(209, 209, 209, 0.641);
+    border-radius: 50%;
+}
